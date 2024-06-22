@@ -1,0 +1,25 @@
+$fondo-app: #1c1c1c;
+$caja-dark: #1f2937;
+$caja-light: #ecfdf5;
+$caja-input: #273549;
+$texto-sec: #95999f;
+$verde: #10b981;
+$verde-claro: #17f0a7;
+$blanco: #fff;
+$negro: #000;
+$font: "Inter", sans-serif;
+$small-font: .9em;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 100dvh;
+    background: $fondo-app;
+    font-family: $font;
+    margin: 0 1.3em;
+}

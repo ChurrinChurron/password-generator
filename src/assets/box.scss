@@ -1,0 +1,121 @@
+@import "main";
+
+$transition: .3s;
+$width-toggle: 2.6em;
+$height: $width-toggle/2;
+
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 30em;
+  padding: 5em 2.2em;
+  background: $caja-dark;
+
+    .display{
+        position: relative;
+        display: flex;
+        gap: 1em;
+        justify-content: end;
+    
+        span {
+            font-size: $small-font;
+            color: $blanco;
+        }
+
+        span.light {
+          color: $negro;
+        }
+      }
+      .toggle{
+         .toggle-control{
+           transition: $transition;
+            width: $width-toggle;
+            height: $height;
+            display: inline-block;
+           border: 2px solid $texto-sec;
+           border-radius: $height;
+           background-color: rgba($negro,.06);
+           position: relative;
+           cursor: pointer;
+           &:after{
+             transition: $transition;
+             content: "";
+             width: 1.1em;
+             height: 1.1em;
+             display: block;
+             background-color: $blanco;
+             border-radius: 50%;
+             box-shadow: 0 1px 2px rgba(black, .4),0 3px 2px rgba(black,.4);
+             position: absolute;
+             top: 0;
+             left: 0;
+           }
+         }
+         
+        input{
+          display: none;
+          &:checked + .toggle-control{
+            border-color: $verde;
+            background-color: $verde;
+            &:after{
+              left: $width-toggle/2;
+            }
+          }
+        }
+      }
+
+    h2 {
+        color: $blanco;
+        font-size: 1.8em;
+        margin: 1.2em 0 0 0;
+
+        span {
+            color: $verde;
+        }
+    }
+
+    h2.light {
+      color: $fondo-app;
+    }
+
+    p {
+        margin: .6em 0 2.4em 0;
+        color: $caja-light;
+        font-size: 1em;
+    }
+
+    p.light {
+      color: $texto-sec;
+    }
+
+    button {
+        padding: .6em 1em;
+        background: $verde;
+        border: 0;
+        border-radius: .3em;
+        color: $blanco;
+        font-size: $small-font;
+        cursor: pointer;
+    }
+
+    hr {
+        display: block;
+        width: 100%;
+        margin-top: 2.4em;
+        height: .010em;
+        background: $caja-input;
+        border: none;
+    }
+
+    hr.light {
+      background: $texto-sec;
+    }
+}
+
+.box.light {
+  background: $caja-light;
+}  
